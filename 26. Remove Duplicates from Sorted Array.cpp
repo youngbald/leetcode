@@ -8,3 +8,11 @@ public:
         return nums.size();
     }
 };
+
+
+///or 
+int removeElement(vector<int>& nums, int val) {
+    return std::distance(nums.begin(), std::remove(nums.begin(), nums.end(), val));
+    
+    //distance is getting the numbers between these two element, since the val number has been removed from the begin and end, it will return the exact number
+}
