@@ -1,0 +1,10 @@
+//本题只需要确定加到res的是左叶子
+int sumOfLeftLeaves(TreeNode* root){
+if(!root) return NULL;
+int res= 0;
+if(root->left&!root->left->left&&!root->right->left){
+sum+=root->left->val;
+}
+
+return sum+sumOfLeftLeaves(root->left)+sumOfLeftLeaves(root->right);
+}
